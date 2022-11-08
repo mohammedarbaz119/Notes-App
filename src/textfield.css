@@ -1,0 +1,39 @@
+*{
+    box-sizing: border-box;
+}
+.textfield{
+    display: flex;
+    flex-direction: column;
+    height: max-content;
+    max-width: 400px;
+    margin: 0 auto;
+    translate: 0px 50px;
+}
+.title-label{
+    font-size: 30px;
+}
+.note-label{
+    font-size: 30px;
+}
+.title{
+    font-size: 20px;
+    padding: 5px;
+    border: 1px solid black;
+}
+.detail{
+    font-size: 20px;
+    padding: 5px;
+    border: 1px solid black;
+    height: 200px;
+}
+.submit{
+    font-size: 20px;
+    width: 120px;
+    height: 40px;
+    margin-top: 20px;
+    translate:120px;
+    color: white;
+    background-color: chocolate;
+    border-radius: 10px;
+    border: 1px solid chocolate;
+}
