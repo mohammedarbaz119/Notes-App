@@ -1,6 +1,6 @@
 import type { ReactNode } from 'react'
 import React,{createContext, useContext, useState} from 'react'
-import { Note } from './App'
+import { Note } from '../../../src/App'
 
 type cont={
     note:Note,

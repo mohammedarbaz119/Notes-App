@@ -1,11 +1,11 @@
-import React, { createContext, useEffect, useReducer, useState } from 'react';
+import React, { useReducer} from 'react';
 import { Routes, Route, useNavigate } from 'react-router-dom';
-import Textfield from './Textfield';
-import Editfield from './Editfield';
-import Notes from './Notes';
-import EditContexter, { UseEditcontext } from './EditContext';
+import Textfield from './Components/Textfield';
+import Editfield from './Components/Editfield';
+import  { UseEditcontext } from './Components/EditContext';
 import './App.css';
-import { act } from 'react-dom/test-utils';
+import NavBar from './Components/NavBar';
+import Notes from './Components/Notes';
 
 
 
@@ -40,7 +40,7 @@ const App: React.FC = () => {
       case "ADD": {
         localStorage.setItem("note", JSON.stringify([...state, actions.notr]))
         return [...state, actions.notr]
-      };
+      }
       case "DEL": {
         localStorage.setItem("note", JSON.stringify(state.filter((_, i) => actions.idx !== i)))
         return state.filter((_, i) => actions.idx !== i)
@@ -104,17 +104,18 @@ const App: React.FC = () => {
       return
     }
     dispatch({ type: "ADD", notr: state })
+    nav('/')
   }
 
 
   return (
 
     <div>
+      <NavBar/>
       <Routes>
-        <Route path='/' element={<><Textfield handleclick={handleadd} />
-          <Notes allnotes={notes} handledel={handel} handleedit={handeedit} /></>} />
+        <Route path='/' element={<Notes allnotes={notes} handledel={handel} handleedit={handeedit}/>}/>
+        <Route path='/new' element={<Textfield handleclick={handleadd}/>} />
         <Route path='/edit' index element={<Editfield handleedit={Editnote} />} />
-
       </Routes>
     </div>
 

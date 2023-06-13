@@ -25,10 +25,10 @@
 }
 .Edit-add{
     font-size: 20px;
-    width: 120px;
+    width: 30%;
     padding: 10px;
     margin-top: 20px;
-    translate:120px;
+
     color: white;
     background-color:cornflowerblue;
     border: 1px solid cornflowerblue;

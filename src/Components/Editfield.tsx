@@ -1,6 +1,6 @@
 import React, { ChangeEvent, useContext, useState } from "react"
-import { Note} from "./App";
-import './Eedit.css'
+import { Note} from "../../../src/App";
+import '../css/Eedit.css'
 import {UseEditcontext} from "./EditContext"
 
 interface editprops{
